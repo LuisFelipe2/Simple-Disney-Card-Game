@@ -1,0 +1,140 @@
+{
+  "cardList": [
+    {
+      "code" : 0,
+      "name" : "Elza",
+      "description" : "Rainha de Arendelle e possui poderes de gelo",
+      "event" : "Congela um outro card",
+      "type" : "LIGHT",
+      "number" : 24
+    },
+    {
+      "code" : 0,
+      "name" : "Elza",
+      "description" : "Rainha de Arendelle e possui poderes de gelo",
+      "event" : "Congela um outro card",
+      "type" : "LIGHT",
+      "number" : 24
+    },
+    {
+      "code" : 0,
+      "name" : "Elza",
+      "description" : "Rainha de Arendelle e possui poderes de gelo",
+      "event" : "Congela um outro card",
+      "type" : "LIGHT",
+      "number" : 24
+    },
+    {
+      "code" : 0,
+      "name" : "Elza",
+      "description" : "Rainha de Arendelle e possui poderes de gelo",
+      "event" : "Congela um outro card",
+      "type" : "LIGHT",
+      "number" : 24
+    },
+    {
+      "code" : 0,
+      "name" : "Elza",
+      "description" : "Rainha de Arendelle e possui poderes de gelo",
+      "event" : "Congela um outro card",
+      "type" : "LIGHT",
+      "number" : 24
+    },
+    {
+      "code" : 1,
+      "name" : "Jack",
+      "description" : "Rei do Halloween",
+      "event" : "",
+      "type" : "LIGHT",
+      "number" : 17
+    },
+    {
+      "code" : 2,
+      "name" : "Jack (Papai Cruel)",
+      "description" : "Desastre do natal",
+      "event" : "Entrega presente para outro card",
+      "type" : "LIGHT",
+      "number" : 21
+    },
+    {
+      "code" : 3,
+      "name" : "Simba",
+      "description" : "Rei da selva",
+      "event" : "Rugido do rei",
+      "type" : "LIGHT",
+      "number" : 5
+    },
+    {
+      "code" : 4,
+      "name" : "Woody",
+      "description" : "Cowboy e líder dos brinquedos do Andy",
+      "event" : "\"Tem uma cobra no meu sapato\"",
+      "type" : "LIGHT",
+      "number" : 31
+    },
+    {
+      "code" : 5,
+      "name" : "Buzz",
+      "description" : "Patrulheiro do espaço e brinquedo do Andy",
+      "event" : "Raio lazer",
+      "type" : "LIGHT",
+      "number" : 32
+    },
+    {
+      "code" : 6,
+      "name" : "Mulan",
+      "description" : "Guerreira da China",
+      "event" : "Defende ou ataca outro card",
+      "type" : "LIGHT",
+      "number" : 6
+    },
+    {
+      "code" : 7,
+      "name" : "Merida",
+      "description" : "Rainha das Terras Médias",
+      "event" : "Tiro certeiro",
+      "type" : "LIGHT",
+      "number" : 35
+    },
+    {
+      "code" : 8,
+      "name" : "Malévola",
+      "description" : "Bruxa ambiciosa",
+      "event" : "Maldição do sono",
+      "type" : "DARK",
+      "number" : 3
+    },
+    {
+      "code" : 9,
+      "name" : "Homem das Sombras",
+      "description" : "Deseja controlar nova Orleans",
+      "event" : "Amigos do outro lado",
+      "type" : "DARK",
+      "number" : 29
+    },
+    {
+      "code" : 10,
+      "name" : "Capitão Gancho",
+      "description" : "Pirata mais cruel dos mares",
+      "event" : "Andar na prancha",
+      "type" : "DARK",
+      "number" : 36
+    },
+    {
+      "code" : 11,
+      "name" : "Crocodilo Tic Tac",
+      "description" : "Crocodilo que engoliu um relógio",
+      "event" : "Morder o braço",
+      "type" : "DARK",
+      "number" : 37
+    },
+    {
+      "code" : 0,
+      "name" : "Jafar",
+      "description" : "Conselheiro do sultão",
+      "event" : "Controle mental",
+      "type" : "DARK",
+      "number" : 7
+    }
+  ]
+}

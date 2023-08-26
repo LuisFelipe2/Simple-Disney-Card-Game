@@ -1,0 +1,180 @@
+openapi: 3.0.0
+info:
+  version: 1.0.0
+  title: Disney Card Game
+  description: A simple api that's simule an api for card games
+  contact:
+    name: Luís Felipe Pereira Auth
+    email: luisfelipe.pereiraauth@gmail.com
+servers:
+  - url: localhost:8080
+    description: Desenvolvimento
+  - url: to-update
+    description: Procução
+tags:
+  - name: Deck
+    description: Operations with a player Deck
+  - name: Card
+    description: Operations abount Cards
+  - name: events
+    description: Operantions envolving events that happenneds menwhile the game
+
+paths:
+  /my-decks:
+    description: return all cards in my deck
+    get:
+      summary: Get my deck
+      tags:
+        - Deck
+      responses:
+        200:
+          description: Return my deck info
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Deck'
+        204:
+          description: User dont have a deck
+          content:
+            application/json:
+              schema:
+                {}
+        404:
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorMessage'
+        500:
+          description: Internal Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorMessage'
+    post:
+      tags:
+        - Deck
+      summary: Create my deck
+      operationId: Indicates cards id to add at user deck
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserDeckRequest'
+      responses:
+        201:
+          description: Deck created
+
+  /Cards:
+    get:
+      summary: Get all Cards
+      operationId: getAllCards
+      parameters:
+        - in: query
+          name: page
+          schema:
+            type: integer
+        - in: query
+          name: size
+          schema:
+            type: integer
+        - in: query
+          name: sort
+          schema:
+            type: string
+      responses:
+        200:
+          description: Return my deck info
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CardPageable'
+
+components:
+  schemas:
+    UserDeckRequest:
+      type: object
+      additionalProperties: false
+      properties:
+        cardsList:
+          $ref: '#/components/schemas/CardIdList'
+    CardIdList:
+      type: array
+      items:
+        $ref: '#/components/schemas/CardId'
+    CardId:
+      type: integer
+      format: int64
+    Deck:
+      type: object
+      additionalProperties: false
+      properties:
+        cardsList:
+          $ref: '#/components/schemas/CardList'
+    CardList:
+      type: array
+      items:
+          $ref: '#/components/schemas/Card'
+    Card:
+      type: object
+      properties:
+        code:
+          type: integer
+          format: int64
+        name:
+          type: string
+        description:
+          type: string
+        event:
+          type: string
+        image:
+          type: string
+          format: binary
+        number:
+          type: integer
+          format: int32
+        type:
+          type: string
+          enum:
+            - light
+            - dark
+    CardPageable:
+      type: object
+      properties:
+        content:
+          $ref: '#/components/schemas/CardList'
+        pageable:
+          $ref: '#/components/schemas/Pageable'
+        totalPages:
+          type: integer
+        totalElements:
+          type: integer
+        first:
+          type: boolean
+        last:
+          type: boolean
+
+    Pageable:
+      type: object
+      properties:
+        sort:
+          type: object
+        pageSize:
+          type: integer
+        pageNumber:
+          type: integer
+        totalPages:
+          type: integer
+        totalElements:
+          type: integer
+        first:
+          type: boolean
+        last:
+          type: boolean
+
+
+    ErrorMessage:
+      type: object
+      properties:
+        message:
+          type: string
